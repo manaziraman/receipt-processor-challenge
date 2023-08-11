@@ -4,7 +4,7 @@ This README provides instructions for building, running, and testing the applica
 my design decisions when developing this backend app.
 
 # Running the Application
-- `make all`: This command builds the Docker image and runs the application in a container in one step. It's a shortcut for make build followed by make run.
+- `make all`: *Use this command to run the app*. It builds the Docker image and runs the application in a container in one step. It's a shortcut for make build followed by make run.
 - `make build`: This command builds the Docker image for the application using the specified IMAGE_NAME. It uses the Dockerfile in the current directory to define how the image should be built.
 - `make run`: This command first builds the Docker image (if not already built) and then runs the application inside a Docker container. The container is named according to the CONTAINER_NAME, and the application is accessible at http://localhost:8080.
 - `make test`: This command runs the tests for the application using the local Go installation. It does not use Docker to run the tests.
