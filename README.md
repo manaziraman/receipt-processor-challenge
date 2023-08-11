@@ -2,6 +2,8 @@
 
 A backend REST API web service that accepts HTTP requests and returns responses based on conditions outlined in the section below. The application calculates points based on the receipt details and provides endpoints to process receipts and retrieve points.
 
+Visit https://github.com/fetch-rewards/receipt-processor-challenge for more detail on examples and the project specifications.
+
 ### Premise
 The application processes receipts and calculates points based on specific criteria:
 
