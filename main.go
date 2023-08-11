@@ -19,5 +19,3 @@ func main() {
 	fmt.Println("Server started at http://localhost:8080")
 	http.ListenAndServe(":8080", r)
 }
-
-// TODO: DOCKER fix (make stopping and cleaning better), and final check
