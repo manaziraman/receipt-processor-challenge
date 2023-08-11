@@ -40,10 +40,11 @@ Server started at http://localhost:8080
 ```
 6. Verify the app is running by visiting http://localhost:8080
 
-### Making API Calls
+## Making API Calls
 You can use tools like Postman or Curl to make calls to the API.
 
-- **POST** Route "/receipts/process" - Process Receipt
+### Process Receipt
+- **POST** Route "/receipts/process"
 - REQUEST BODY FORMAT:
 ```
 {
@@ -54,12 +55,15 @@ You can use tools like Postman or Curl to make calls to the API.
   "total": <str>
 }
 ```
-- **GET** Route "/receipts/{id}/points" - Get Points for Receipt
+### Get Points for Receipt
+- **GET** Route "/receipts/{id}/points"
 - Replace `{id}` with the UUID of the receipt.
 
-### Running Tests
+## Running Tests
 Run tests from the project's main directory:
-```make test```
+```
+make test
+```
 
 Tests check that the app should:
 
