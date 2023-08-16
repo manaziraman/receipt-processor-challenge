@@ -66,7 +66,7 @@ func ProcessReceipts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	receiptsDB[id] = calculatePoints(receipt) // Replace with actual points calculation
+	receiptsDB[id] = calculatePoints(receipt)
 
 	// Successful response
 	w.Header().Set("Content-Type", "application/json")
