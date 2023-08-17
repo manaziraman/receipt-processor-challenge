@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-/*
-TestProcessReceipts tests the ProcessReceipts function with various test cases.
-
-@param t *testing.T - The testing object provided by the Go testing framework.
+/**
+* TestProcessReceipts tests the ProcessReceipts function with various test cases.
+*
+* @param t *testing.T - The testing object provided by the Go testing framework.
 */
 func TestProcessReceipts(t *testing.T) {
 	// Test cases
@@ -44,11 +44,11 @@ func TestProcessReceipts(t *testing.T) {
 	}
 }
 
-/*
-TestGetPoints tests the GetPoints function with test cases for valid and
-non-existent receipt IDs.
-
-@param t *testing.T - The testing object provided by the Go testing framework.
+/**
+* TestGetPoints tests the GetPoints function with test cases for valid and
+* non-existent receipt IDs.
+*
+* @param t *testing.T - The testing object provided by the Go testing framework.
 */
 func TestGetPoints(t *testing.T) {
 	// Test case for valid receipt ID

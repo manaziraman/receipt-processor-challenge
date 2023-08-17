@@ -9,14 +9,14 @@ import (
 	"unicode"
 )
 
-/*
-calculatePoints calculates the points for a given receipt based on specific rules.
-The rules include points for alphanumeric characters in the retailer name, round dollar amounts,
-multiples of 0.25, number of items, item description length, odd purchase date, and time of purchase.
-
-@param receipt Receipt - The receipt for which the points are being calculated.
-
-@return int - The total points calculated for the receipt.
+/**
+* calculatePoints calculates the points for a given receipt based on specific rules.
+* The rules include points for alphanumeric characters in the retailer name, round dollar amounts,
+* multiples of 0.25, number of items, item description length, odd purchase date, and time of purchase.
+*
+* @param receipt Receipt - The receipt for which the points are being calculated.
+*
+* @return int - The total points calculated for the receipt.
 */
 func calculatePoints(receipt Receipt) int {
 	points := 0

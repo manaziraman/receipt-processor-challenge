@@ -13,12 +13,15 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-/*
-TestIntegration tests the integration of the ProcessReceipts and GetPoints endpoints.
-It loads example receipts from the examples directory, processes them, and retrieves
-the points.
-
-@param t *testing.T - The testing object provided by the Go testing framework.
+/**
+* TestIntegration tests the integration of the ProcessReceipts and GetPoints endpoints.
+* It loads example receipts from the examples directory, processes them, and retrieves
+* the points.
+*
+* We load json files from the examples directory, convert them to receipts, and then
+* back to json to isolate the json formatting from the endpoints.
+*
+* @param t *testing.T - The testing object provided by the Go testing framework.
 */
 func TestIntegration(t *testing.T) {
 	r := mux.NewRouter()
@@ -71,13 +74,13 @@ func TestIntegration(t *testing.T) {
 	}
 }
 
-/*
-loadExampleReceipt loads a receipt from a JSON file.
-
-@param filename string - The path to the JSON file containing the receipt.
-
-@return *Receipt - A pointer to the loaded receipt.
-@return error - An error if loading the receipt fails.
+/**
+* loadExampleReceipt loads a receipt from a JSON file.
+*
+* @param filename string - The path to the JSON file containing the receipt.
+*
+* @return *Receipt - A pointer to the loaded receipt.
+* @return error - An error if loading the receipt fails.
 */
 func loadExampleReceipt(filename string) (*Receipt, error) {
 	file, err := os.Open(filename)

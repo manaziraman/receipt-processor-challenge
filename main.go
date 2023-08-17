@@ -7,9 +7,9 @@ import (
 	"github.com/gorilla/mux"
 )
 
-/*
-main initializes the HTTP server and sets up the routes for processing receipts and retrieving points.
-It starts the server at http://localhost:8080 and listens for incoming HTTP requests.
+/**
+* main initializes the HTTP server and sets up the routes for processing receipts and retrieving points.
+* It starts the server at http://localhost:8080 and listens for incoming HTTP requests.
 */
 func main() {
 	r := mux.NewRouter()

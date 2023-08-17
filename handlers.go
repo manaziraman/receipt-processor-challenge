@@ -9,12 +9,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-/*
-ProcessReceipts handles the processing of receipts. It validates the receipt and
-calculates the points.
-
-@param w http.ResponseWriter - The HTTP response writer.
-@param r *http.Request - The HTTP request.
+/**
+* ProcessReceipts handles the processing of receipts. It validates the receipt and
+* calculates the points.
+*
+* @param w http.ResponseWriter - The HTTP response writer.
+* @param r *http.Request - The HTTP request.
 */
 func ProcessReceipts(w http.ResponseWriter, r *http.Request) {
 	// Check for unsupported HTTP method
@@ -37,7 +37,7 @@ func ProcessReceipts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Validate required fields
+	// Validate required fields - up to business requirements
 	if receipt.Retailer == "" || receipt.PurchaseDate == "" || len(receipt.Items) == 0 {
 		http.Error(w, "Missing required fields", http.StatusBadRequest)
 		return
@@ -66,7 +66,7 @@ func ProcessReceipts(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	receiptsDB[id] = calculatePoints(receipt) // Replace with actual points calculation
+	receiptsDB[id] = calculatePoints(receipt)
 
 	// Successful response
 	w.Header().Set("Content-Type", "application/json")
@@ -74,11 +74,11 @@ func ProcessReceipts(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"id": id})
 }
 
-/*
-GetPoints handles the retrieval of points for a given receipt ID.
+/**
+* GetPoints handles the retrieval of points for a given receipt ID.
 
-@param w http.ResponseWriter - The HTTP response writer.
-@param r *http.Request - The HTTP request.
+* @param w http.ResponseWriter - The HTTP response writer.
+* @param r *http.Request - The HTTP request.
 */
 func GetPoints(w http.ResponseWriter, r *http.Request) {
 	// Extract the receipt ID from the URL path

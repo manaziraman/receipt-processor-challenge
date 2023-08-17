@@ -7,11 +7,11 @@ import (
 // In-memory database to store receipts and points
 var receiptsDB = make(map[string]int)
 
-/*
-generateUUID generates a new UUID.
-
-@return string - The generated UUID.
-@return error - An error if generating the UUID fails.
+/**
+* generateUUID generates a new UUID.
+*
+* @return string - The generated UUID.
+* @return error - An error if generating the UUID fails.
 */
 func generateUUID() (string, error) {
 	id, err := uuid.NewRandom() // Negligible chance of duplicate IDs

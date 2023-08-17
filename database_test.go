@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-/*
-TestGenerateUUID tests the generateUUID function to ensure that it returns a valid UUID.
-It asserts that the function does not return an error and that the returned UUID is valid.
-
-@param t *testing.T - The testing object provided by the Go testing framework.
+/**
+* TestGenerateUUID tests the generateUUID function to ensure that it returns a valid UUID.
+* It asserts that the function does not return an error and that the returned UUID is valid.
+*
+* @param t *testing.T - The testing object provided by the Go testing framework.
 */
 func TestGenerateUUID(t *testing.T) {
 	// Call the generateUUID function

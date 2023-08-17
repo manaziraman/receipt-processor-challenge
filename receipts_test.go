@@ -6,11 +6,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-/*
-TestCalculatePoints tests the calculatePoints function with various test cases.
-It asserts that the calculated points match the expected points for different receipts.
-
-@param t *testing.T - The testing object provided by the Go testing framework.
+/**
+* TestCalculatePoints tests the calculatePoints function with various test cases.
+* It asserts that the calculated points match the expected points for different receipts.
+*
+* @param t *testing.T - The testing object provided by the Go testing framework.
 */
 func TestCalculatePoints(t *testing.T) {
 	tests := []struct {
